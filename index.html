@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        var base = '/';
+        if (path.endsWith('/')) base = path;
+        else if (path.lastIndexOf('/') > 0) base = path.slice(0, path.lastIndexOf('/') + 1);
+        if (base !== '/') {
+          var el = document.createElement('base');
+          el.href = base;
+          document.head.appendChild(el);
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta

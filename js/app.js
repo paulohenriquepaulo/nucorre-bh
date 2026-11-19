@@ -3,6 +3,7 @@ import {
   CHALLENGE_RULES,
   getChallengeById,
   LOGO_PATH,
+  resolveAsset,
 } from './challenge-config.js';
 import {
   computeEndDate,
@@ -176,11 +177,20 @@ function escapeHtml(str) {
 
 function renderHome() {
   const cards = CHALLENGES.map(
-    (c) => `
+    (c) => {
+      const coverUrl = resolveAsset(c.cover);
+      const poster = c.coverMode === 'contain';
+      const visualClass = poster
+        ? 'challenge-card__visual challenge-card__visual--poster'
+        : 'challenge-card__visual';
+      const badge = poster
+        ? ''
+        : `<span class="challenge-card__badge">${CHALLENGE_RULES.totalKm} km · ${CHALLENGE_RULES.totalDays} dias</span>`;
+      return `
     <article class="challenge-card" style="--accent:${c.accent}">
-      <div class="challenge-card__visual">
-        <img src="${c.cover}" alt="${escapeHtml(c.name)}" loading="lazy" />
-        <span class="challenge-card__badge">${CHALLENGE_RULES.totalKm} km · ${CHALLENGE_RULES.totalDays} dias</span>
+      <div class="${visualClass}">
+        <img src="${coverUrl}" alt="${escapeHtml(c.name)}" loading="lazy" />
+        ${badge}
       </div>
       <div class="challenge-card__body">
         <p class="challenge-card__eyebrow">${escapeHtml(c.subtitle)}</p>
@@ -190,12 +200,13 @@ function renderHome() {
           Acessar desafio
         </button>
       </div>
-    </article>`
+    </article>`;
+    }
   ).join('');
 
   return `
     <header class="hero">
-      <img class="hero__logo" src="${LOGO_PATH}" alt="NUCORRE BH" />
+      <img class="hero__logo" src="${resolveAsset(LOGO_PATH)}" alt="NUCORRE BH" />
       <h1>Desafios Virtuais de Corrida</h1>
       <p>Escolha um desafio, acompanhe seu progresso e gere artes para compartilhar.</p>
     </header>
@@ -238,7 +249,7 @@ function renderChallenge(challenge) {
     <header class="page-header">
       <button type="button" class="btn btn-ghost" data-action="home">← Voltar aos desafios</button>
       <div class="page-header__title">
-        <img src="${challenge.cover}" alt="" class="page-header__thumb" />
+        <img src="${resolveAsset(challenge.cover)}" alt="" class="page-header__thumb${challenge.coverMode === 'contain' ? ' page-header__thumb--poster' : ''}" />
         <div>
           <p class="eyebrow">${escapeHtml(challenge.subtitle)}</p>
           <h1>${escapeHtml(challenge.name)}</h1>

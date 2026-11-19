@@ -13,7 +13,8 @@ export const CHALLENGES = [
     number: 1,
     name: 'Praça da Estação',
     subtitle: '4º Desafio Virtual',
-    cover: 'assets/desafios/desafio-1/cover.svg',
+    cover: 'assets/desafios/desafio-1/cover.jpg',
+    coverMode: 'contain',
     arte: 'assets/desafios/desafio-1/arte.jpg',
     medalha: 'assets/desafios/desafio-1/medalha.png',
     accent: '#ff6600',
@@ -63,6 +64,16 @@ export const CHALLENGES = [
 ];
 
 export const LOGO_PATH = 'assets/logo.png';
+
+/** Caminhos corretos no GitHub Pages (subpasta do repositório). */
+export function resolveAsset(path) {
+  if (typeof document === 'undefined') return path;
+  try {
+    return new URL(path, document.baseURI).href;
+  } catch {
+    return path;
+  }
+}
 
 export function getChallengeById(id) {
   return CHALLENGES.find((c) => c.id === id) || null;
