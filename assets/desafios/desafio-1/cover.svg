@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" role="img" aria-label="Desafio Praça da Estação">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <filter id="noise" x="0" y="0">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/>
+    </filter>
+  </defs>
+  <rect width="400" height="520" fill="url(#g1)"/>
+  <path d="M0 120 L400 40 L400 200 L0 280Z" fill="#ff6600" opacity="0.25"/>
+  <path d="M-20 380 Q200 300 420 420 L420 520 L-20 520Z" fill="#ff6600" opacity="0.5"/>
+  <text x="28" y="72" fill="#fff" font-family="Arial Black, sans-serif" font-size="22" font-style="italic">NUCORRE</text>
+  <text x="28" y="98" fill="#ff6600" font-family="Arial, sans-serif" font-size="14" font-weight="700">DESAFIO VIRTUAL · 150K</text>
+  <text x="28" y="200" fill="#fff" font-family="Georgia, serif" font-size="42" font-weight="bold">PRAÇA DA</text>
+  <text x="28" y="252" fill="#ff6600" font-family="Georgia, serif" font-size="44" font-weight="bold">ESTAÇÃO</text>
+  <text x="28" y="480" fill="rgba(255,255,255,0.75)" font-family="Arial, sans-serif" font-size="16">150 km · 75 dias</text>
+  <circle cx="330" cy="400" r="70" fill="none" stroke="#ff6600" stroke-width="8" opacity="0.6"/>
+  <text x="302" y="408" fill="#fff" font-size="36"><Ã</text>
+</svg>

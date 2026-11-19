@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Acompanhe desafios virtuais de corrida NUCORRE BH, gere artes e certificados para compartilhar."
+    />
+    <title>NUCORRE BH · Desafios Virtuais</title>
+    <!-- Para GitHub Pages em subpasta: <base href="/nome-do-repo/" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <main id="app" class="app-root" aria-live="polite"></main>
+      <footer class="site-footer">
+        <p>CORRIDA · SAÚDE · AMIZADE — dados salvos apenas neste dispositivo.</p>
+      </footer>
+    </div>
+    <div id="toast" class="toast" role="status"></div>
+    <div
+      id="photo-editor-overlay"
+      class="photo-editor"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="photo-editor-title"
+    >
+      <div class="photo-editor__sheet">
+        <h2 id="photo-editor-title">Ajustar foto</h2>
+        <p class="photo-editor__hint">Arraste para centralizar · use o zoom se precisar</p>
+        <canvas id="photo-editor-canvas" width="300" height="300"></canvas>
+        <label class="photo-editor__zoom">
+          <span>Zoom</span>
+          <input type="range" id="photo-editor-zoom" min="1" max="2.8" step="0.02" value="1" />
+        </label>
+        <div class="photo-editor__actions">
+          <button type="button" class="btn btn-primary" id="photo-editor-confirm">Usar esta foto</button>
+          <button type="button" class="btn btn-secondary" id="photo-editor-cancel">Cancelar</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

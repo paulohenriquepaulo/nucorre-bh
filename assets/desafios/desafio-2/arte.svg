@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" role="img" aria-label="Arte desafio Lagoa da Pampulha">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="55%" stop-color="#1b4965"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#bg2)"/>
+  <ellipse cx="780" cy="520" rx="420" ry="280" fill="#e85d04" opacity="0.22"/>
+  <text x="80" y="200" fill="#e85d04" font-family="Arial Black, sans-serif" font-size="56">NUCORRE BH</text>
+  <text x="80" y="380" fill="#fff" font-family="Georgia, serif" font-size="96" font-weight="bold">LAGOA DA</text>
+  <text x="80" y="500" fill="#e85d04" font-family="Georgia, serif" font-size="104" font-weight="bold">PAMPULHA</text>
+  <text x="80" y="620" fill="rgba(255,255,255,0.7)" font-family="Arial, sans-serif" font-size="42">Desafio Virtual · 150K · 75 dias</text>
+</svg>

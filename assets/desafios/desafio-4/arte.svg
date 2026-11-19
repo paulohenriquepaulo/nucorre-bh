@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" role="img" aria-label="Arte desafio Mercado Central">
+  <rect width="1080" height="1920" fill="#0a0a0a"/>
+  <rect x="0" y="1100" width="1080" height="500" fill="#ff7b00" opacity="0.32"/>
+  <text x="80" y="200" fill="#ff7b00" font-family="Arial Black, sans-serif" font-size="56">NUCORRE BH</text>
+  <text x="80" y="380" fill="#fff" font-family="Georgia, serif" font-size="96" font-weight="bold">MERCADO</text>
+  <text x="80" y="500" fill="#ff7b00" font-family="Georgia, serif" font-size="104" font-weight="bold">CENTRAL</text>
+  <text x="80" y="620" fill="rgba(255,255,255,0.7)" font-family="Arial, sans-serif" font-size="42">Desafio Virtual · 150K · 75 dias</text>
+</svg>
