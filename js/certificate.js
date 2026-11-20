@@ -84,10 +84,11 @@ const ZONES = {
   panelBottom: 56,
 };
 
-function drawBackground(ctx, accent) {
+function drawBackground(ctx, accent, challenge) {
+  const mid = challenge?.theme?.bg || '#0a0a0a';
   const grad = ctx.createLinearGradient(0, 0, 0, H);
   grad.addColorStop(0, '#161616');
-  grad.addColorStop(0.55, '#0a0a0a');
+  grad.addColorStop(0.55, mid);
   grad.addColorStop(1, '#060606');
   ctx.fillStyle = grad;
   ctx.fillRect(0, 0, W, H);
@@ -220,7 +221,7 @@ export async function generateCertificate({
     }
   }
 
-  drawBackground(ctx, accent);
+  drawBackground(ctx, accent, challenge);
 
   ctx.textAlign = 'center';
   ctx.fillStyle = accent;
