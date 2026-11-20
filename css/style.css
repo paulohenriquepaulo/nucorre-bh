@@ -124,13 +124,14 @@ img {
 }
 
 .challenge-card__visual--poster {
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 3 / 4;
+  max-height: 240px;
   background: #000;
 }
 
 .challenge-card__visual--poster img {
   object-fit: contain;
-  object-position: center top;
+  object-position: center center;
 }
 
 .challenge-card__badge {
